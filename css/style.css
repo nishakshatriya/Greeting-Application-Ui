@@ -10,6 +10,12 @@
     .sidenav a {font-size: 18px;}
   }
 
+  @media only screen and (max-width:1024px){
+    .content-icons {
+      display:none;
+    }
+  }
+  
   .nav-bar-heading {
     padding-top: 15px;
     margin-left: 20px;
