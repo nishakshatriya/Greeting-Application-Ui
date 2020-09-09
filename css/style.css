@@ -1,0 +1,61 @@
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 25px; /* Increased text to enable scrolling */
+    padding: 0px 100px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .nav-bar-heading {
+    padding-top: 15px;
+    margin-left: 20px;
+    color: gray;
+    float: left;
+  }
+
+  .nav-bar-content-div {
+    position: relative;
+  }
+
+  .content-icons {
+    justify-content: space-between;
+    float: right;
+    padding: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .horizontal-nav-bar {
+    box-shadow: 0px 0px 5px 0px gray;
+    left:153px;
+    top:-8px;
+    height: 50px;
+    width: 88%;
+    float: auto;
+    position: relative;
+  }
+
+  .nav-bar-content-div button {
+    justify-content: space-between;
+    float: right;
+    padding: 5px;
+    margin-top: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(10, 208, 223);
+    border: none;
+    color: #ffffff;
+    outline: none;
+  }
+
+  .nav-bar-content-div .sign-in {
+    background-color: white;
+    color: rgb(10, 208, 223);
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+ 
