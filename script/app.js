@@ -6,9 +6,12 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
     showPopup(".delete-popup");
   });
   
+  document.querySelector(".edit-side-navbar").addEventListener("click", () => {
+    showPopup(".edit-popup");
+  });
   
   function showPopup(classname) {
-    let popuplist = [".add-popup",".delete-popup"];
+    let popuplist = [".add-popup",".delete-popup",".edit-popup"];
     popuplist.forEach(function (clsname) {
       if (clsname !== classname) {
         document.querySelector(clsname).style.display = "none";
@@ -36,7 +39,7 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
   });
   
   function ClosePopUp() {
-    let popuplist = [".add-popup",".delete-popup"];
+    let popuplist = [".add-popup",".delete-popup",".edit-popup"];
     popuplist.forEach(function (clsname) {
       document.querySelector(clsname).style.display = "none";
     });
