@@ -5,11 +5,11 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
   document.querySelector(".delete-side-navbar").addEventListener("click", () => {
     showPopup(".delete-popup");
   });
-  
+
   document.querySelector(".edit-side-navbar").addEventListener("click", () => {
     showPopup(".edit-popup");
-  });
-  
+  })
+
   function showPopup(classname) {
     let popupClassArray = [".add-popup",".delete-popup",".edit-popup"];
     popupClassArray.forEach(function (clsname) {

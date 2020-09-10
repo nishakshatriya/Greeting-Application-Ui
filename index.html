@@ -72,7 +72,7 @@
             <div class="delete-popup">
                 <form>
                     <div class="input-forms">
-                        <div class="label-names">
+                        <div class="delete-label-names">
                             <label>Greeting Id:</label>
                             <input class="greeting-id" type="text" placeholder="Enter your greeting Id" required>
                         </div>
@@ -80,24 +80,23 @@
                 <button type="submit" class="btn btn-success add-submit">Submit</button>
                 <button type="button" class="btn btn-danger close-button">Close</button>
             </div>
-            <div class="edit-popup">
-                <form>
-                    <div class="input-forms">
-                        <div class="label-names">
-                            <label>Id:</label>
-                            <input class="greeting-id" type="text" placeholder="Enter Id" required>
-                        </div>
-                        <div class="label-names">
-                            <label>Message:</label>
-                            <input class="greeting-msg" type="text" placeholder="Enter Message" required>
-                        </div>
-                    </div>
-                </form>
-                <button type="submit" class="btn btn-success add-submit">Submit</button>
-                <button type="button" class="btn btn-danger close-button">Close</button>
-            </div>
         </div>
-
+        <div class="edit-popup">
+            <form>
+                <div class="input-forms">
+                    <div class="edit-label-names">
+                        <label>Greeting Idd :</label>
+                        <input class="greeting-ids" type="text" placeholder="Enter Id" required>
+                    </div>
+                    <div class="edit-label-names">
+                        <label>Greeting Msg:</label>
+                        <input class="greeting-mgs" type="text" placeholder="Enter Message" required>
+                    </div>
+                </div>
+            </form>
+            <button type="submit" class="btn btn-success add-submit">Submit</button>
+            <button type="button" class="btn btn-danger close-button">Close</button>
+        </div>
     </div>
     <script src="script/app.js">
 
@@ -115,5 +114,4 @@
         </script>
 
 </body>
-
 </html>
