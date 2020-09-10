@@ -11,8 +11,8 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
   });
   
   function showPopup(classname) {
-    let popuplist = [".add-popup",".delete-popup",".edit-popup"];
-    popuplist.forEach(function (clsname) {
+    let popupClassArray = [".add-popup",".delete-popup",".edit-popup"];
+    popupClassArray.forEach(function (clsname) {
       if (clsname !== classname) {
         document.querySelector(clsname).style.display = "none";
       }
@@ -39,8 +39,8 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
   });
   
   function ClosePopUp() {
-    let popuplist = [".add-popup",".delete-popup",".edit-popup"];
-    popuplist.forEach(function (clsname) {
+    let popupClassArray = [".add-popup",".delete-popup",".edit-popup"];
+    popupClassArray.forEach(function (clsname) {
       document.querySelector(clsname).style.display = "none";
     });
   }
