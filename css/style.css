@@ -23,13 +23,14 @@
     color: #f1f1f1;
   }
   
-  
+    
   .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
+    margin-left: 170px; /* Same as the width of the sidenav */
     font-size: 25px; /* Increased text to enable scrolling */
-    padding: 0px 100px;
+    /* padding: 0px 100px; */
   }
   
+
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -89,4 +90,34 @@
     margin-top: 10px;
   }
 
- 
+ .popup-boxes {
+    margin-left: 30%;
+    margin-top: 10%;
+    background-color: rgb(153, 190, 238);
+    padding: 25px;
+    margin-right: 40%;
+    border-radius: 15px;
+    opacity: 95%;
+    z-index: 10;
+    display: none;
+ }
+
+ .label-names {
+     padding: 10px;
+ }
+
+ .first-name{
+   width: 70%;
+ }
+ .last-name{
+   width: 70%;
+ }
+
+ .add-submit{
+  width: 30%;
+ }
+
+ .close-button{
+  width: 30%;
+ }
+
