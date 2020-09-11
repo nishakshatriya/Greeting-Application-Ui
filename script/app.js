@@ -11,7 +11,9 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
   })
 
   document.querySelector(".list-side-navbar").addEventListener("click", () => {
+    for(i=0;i<=5;i++){
       showPopup(".messages-list");
+    }
   })
 
   function showPopup(classname) {
