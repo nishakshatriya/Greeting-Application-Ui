@@ -10,8 +10,12 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
     showPopup(".edit-popup");
   })
 
+  document.querySelector(".list-side-navbar").addEventListener("click", () => {
+      showPopup(".messages-list");
+  })
+
   function showPopup(classname) {
-    let popupClassArray = [".add-popup",".delete-popup",".edit-popup"];
+    let popupClassArray = [".add-popup",".delete-popup",".edit-popup",".messages-list"];
     popupClassArray.forEach(function (clsname) {
       if (clsname !== classname) {
         document.querySelector(clsname).style.display = "none";
@@ -39,7 +43,7 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
   });
   
   function ClosePopUp() {
-    let popupClassArray = [".add-popup",".delete-popup",".edit-popup"];
+    let popupClassArray = [".add-popup",".delete-popup",".edit-popup",".messages-list"];
     popupClassArray.forEach(function (clsname) {
       document.querySelector(clsname).style.display = "none";
     });
