@@ -1,3 +1,11 @@
+
+$.ajax('http://localhost:3000/greetings/',
+{
+  success: function(data,status,xhr){
+    $('msgs-list').append(data);
+  }
+})
+
 document.querySelector(".add-side-navbar").addEventListener("click", () => {
     showPopup(".add-popup");
   });
@@ -65,7 +73,7 @@ list = [{
 
 function displayCards(){
   let listOfContent = document.querySelector(".messages-list");
-  let box = document.createElement("div");
+  // let box = document.createElement("div");
   for(let i = 0; i< list.length; i++){
       let messageContent = document.createElement("div");
       messageContent.className = "message-content-box";
