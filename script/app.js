@@ -10,12 +10,6 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
     showPopup(".edit-popup");
   })
 
-  document.querySelector(".list-side-navbar").addEventListener("click", () => {
-    for(i=0;i<=5;i++){
-      showPopup(".messages-list");
-    }
-  })
-
   function showPopup(classname) {
     let popupClassArray = [".add-popup",".delete-popup",".edit-popup",".messages-list"];
     popupClassArray.forEach(function (clsname) {
@@ -51,3 +45,47 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
     });
   }
   
+list = [{
+    "id":"QWersdf1234rvboiQ",
+    "name":"Nisha",
+    "message":"Hello Nisha",
+    "time": "5 min ago"
+},
+{
+    "id":"QWersdf1234rvboiQ",
+    "name":"Nisha",
+    "message":"Hello Nisha",
+    "time": "5 min ago"
+},
+{   "id":"QWersdf1234rvboiQ",
+    "name":"Nisha",
+    "message":"Hello Nisha",
+    "time": "5 min ago"
+}]
+
+function displayCards(){
+  let listOfContent = document.querySelector(".messages-list");
+  let box = document.createElement("div");
+  for(let i = 0; i< list.length; i++){
+      let messageContent = document.createElement("div");
+      messageContent.className = "message-content-box";
+      let name = document.createElement("div");
+      name.className = "name-div";
+      name.innerText = list[i].name;
+      let message = document.createElement("div");
+      message.className = "message-div";
+      message.innerText = list[i].message;
+      let time = document.createElement("div");
+      time.className = "time-div";
+      time.innerText = list[i].time; 
+      let id = document.createElement("div");
+      id.className = "time-div";
+      id.innerText = list[i].id;
+
+      messageContent.appendChild(id)
+      messageContent.appendChild(name);
+      messageContent.appendChild(message);
+      messageContent.appendChild(time);
+      listOfContent.appendChild(messageContent);
+  };
+}

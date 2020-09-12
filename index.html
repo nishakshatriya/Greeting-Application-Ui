@@ -43,7 +43,7 @@
         </nav>
 
         <div class="sidenav">
-            <a href="#"><i class="fa fa-list list-side-navbar" aria-hidden="true"></i> List</a>
+            <a href="#" onclick="displayCards()"><i class="fa fa-list list-side-navbar" aria-hidden="true"></i> List</a>
             <a href="#"><i class="fa fa-plus add-side-navbar" aria-hidden="true"></i> Add</a>
             <a href="#"><i class="fa fa-pencil edit-side-navbar" aria-hidden="true"></i> Edit</a>
             <a href="#"><i class="fa fa-trash-o delete-side-navbar" aria-hidden="true"></i> Delete</a>
@@ -51,6 +51,8 @@
 
         <div class="main">
             <h5>Basic Panels Layout</h5>
+            <div class="messages-list" id="msgs-list">
+            </div>
         </div>
         <div class="popup-boxes">
             <div class="add-popup">
@@ -96,25 +98,6 @@
             </form>
             <button type="submit" class="btn btn-success add-submit">Submit</button>
             <button type="button" class="btn btn-danger close-button">Close</button>
-        </div>
-        <div class="messages-list">
-            <div class="card">
-                <div class="card-body">
-                    <div class="card-text"><div class="text-muted">ObjectId(07WERVBn8weqfqei21)</div></div>
-                    <div class="card-title">Nisha</div>
-                    <p class="card-text">Hello Nisha</p>
-                    <div class="card-text"><div class="text-muted">3 mins ago</div></div>
-                </div>
-            </div>
-            <div class="card-1">
-                <div class="card-body">
-                    <div class="card-text"><div class="text-muted">ObjectId(07WERVBn8weqfqei21)</div></div>
-                    <div class="card-title">Nisha</div>
-                    <p class="card-text">Hello Nisha</p>
-                    <div class="card-text"><div class="text-muted">3 mins ago</div></div>
-                </div>
-            </div> 
-            <button type="button" class="btn btn-danger close-button list-close-button">Close</button> 
         </div>
     </div>
     <script src="script/app.js">

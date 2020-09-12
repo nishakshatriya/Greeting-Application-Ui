@@ -219,3 +219,38 @@
   z-index: 10px;
   background-color: rgb(192, 222, 241);
 }
+
+.message-content-box {
+  display: flex;
+  word-wrap: break-word;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  box-shadow: 0px 0px 8px 0px rgba(107, 95, 95, 0.733);
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  outline: none;
+  padding-left:10px ;
+  margin-right: 10px;;
+  height: 125px;
+  width:250px;
+  margin-bottom: 15px;
+  font-size:10px;
+  font-weight: 500;
+  transition:2s;
+}
+
+.messages-list {
+  padding-top: 15px;
+  position: relative;
+  left:5%;
+  height: 75vh;
+  float: left;
+  display: flex;
+  width: 76%;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-basis: 33.333333%;
+  font-family: 'Roboto', sans-serif;
+}
