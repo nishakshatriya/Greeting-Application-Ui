@@ -1,10 +1,10 @@
 
-$.ajax('http://localhost:3000/greetings/',
-{
-  success: function(data,status,xhr){
-    $('msgs-list').append(data);
-  }
-})
+// $.ajax('http://localhost:3000/greetings/',
+// {
+//   success: function(data,status,xhr){
+//     $('msgs-list').append(data);
+//   }
+// })
 
 document.querySelector(".add-side-navbar").addEventListener("click", () => {
     showPopup(".add-popup");
