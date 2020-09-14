@@ -13,6 +13,33 @@ function getCards(){
 
 getCards()
 
+let submitOnAdd = document.querySelector(".add-submit");
+submitOnAdd.addEventListener("click", async function () {
+
+  await addData(
+    document.getElementById("fname").value,
+    document.getElementById("lname").value
+  );
+  await getCards();
+  document.getElementById("fname").value=''
+  document.getElementById("lname").value=''
+});
+
+function addData(firstName,lastName){  
+  fetch('http://localhost:3000/greetings/',{
+    method:'POST',
+    body: JSON.stringify({
+      firstName: firstName,
+      lastName: lastName
+    }),
+    headers: {
+      "Content-type":"application/json; charset=UTF-8"
+    }
+  })
+  .then(data => {return data.json()})
+  .catch(err => {return err});
+}
+
 let deleteOnSubmit = document.querySelector(".delete-submit");
 deleteOnSubmit.addEventListener("click", async function () {
   await deleteMessage(document.getElementById("deleteId").value);
