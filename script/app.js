@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000/greetings/"
+const baseURL = "http://localhost:3000/greetings"
 
 function getCards(){
   fetch(`${baseURL}`)
@@ -12,6 +12,19 @@ function getCards(){
 }
 
 getCards()
+
+let deleteOnSubmit = document.querySelector(".delete-submit");
+deleteOnSubmit.addEventListener("click", async function () {
+  await deleteMessage(document.getElementById("deleteId").value);
+  getCards();
+  document.querySelector(".delete-popup").style.display = "none";
+});
+
+async function deleteMessage(ID) {
+  await fetch(`${baseURL}/${ID}`, {
+    method: "DELETE",
+  });
+}
 
 document.querySelector(".add-side-navbar").addEventListener("click", () => {
     showPopup(".add-popup");
