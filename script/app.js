@@ -35,10 +35,11 @@ function addData(firstName,lastName){
     headers: {
       "Content-type":"application/json; charset=UTF-8"
     }
-  })
+  }, location.reload())
   .then(data => {return data.json()})
   .catch(err => {return err});
 }
+
 
 let deleteOnSubmit = document.querySelector(".delete-submit");
 deleteOnSubmit.addEventListener("click", async function () {
@@ -47,11 +48,12 @@ deleteOnSubmit.addEventListener("click", async function () {
   document.querySelector(".delete-popup").style.display = "none";
 });
 
-async function deleteMessage(ID) {
-  await fetch(`${baseURL}/${ID}`, {
-    method: "DELETE",
-  });
-}
+// async function deleteMessage(ID) {
+//   await fetch(`${baseURL}/${ID}`, {
+//     method: "DELETE",
+//   });
+// }
+
 
 document.querySelector(".add-side-navbar").addEventListener("click", () => {
     showPopup(".add-popup");
@@ -100,13 +102,14 @@ document.querySelector(".add-side-navbar").addEventListener("click", () => {
     });
   }
   
+  let counter = 0;
 function displayCards(list){
   let listOfContent = document.querySelector(".messages-list");
   let box = document.createElement("div");
   for(let i = 0; i< list.length; i++){
       let messageContent = document.createElement("div");
       messageContent.className = "message-content-box";
-      
+
       let name = document.createElement("div");
       name.className = "name-div";
       name.innerText = list[i].firstName;
@@ -125,14 +128,35 @@ function displayCards(list){
       
       let id = document.createElement("div");
       id.className = "id-div";
-      id.innerText = list[i]._id;
+      // id.innerText = list[i]._id;
       id.innerHTML = "ObjectId("+list[i]._id+")";
 
+      let tras = document.createElement("a")
+      tras.className = "fa fa-trash-o deleteTras"
+      tras.innerHTML = "";
+
+      let pencil = document.createElement("div")
+      pencil.className = "fa fa-pencil editPen"
+      pencil.innerHTML = "";
+
+      
+        $('.deleteTras').click(function(){
+          fetch(`${baseURL}/${list[i]._id}`, {
+           method: "DELETE",
+         });
+
+         alert(list[i]._id);
+         location.reload();
+     })
+   
       messageContent.appendChild(id)
       messageContent.appendChild(name);
       messageContent.appendChild(lname);
       messageContent.appendChild(message);
       messageContent.appendChild(time);
+      messageContent.appendChild(tras);
+      messageContent.appendChild(pencil);
       listOfContent.appendChild(messageContent);
   };
 }
+
